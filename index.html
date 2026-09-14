@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم VAY BABAMDI VAY | واي بابامدى واي للسندويجات الفاخرة</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        eggshell: '#FAF8F5',
+                        eggshellCard: '#FFFFFF',
+                        eggshellDark: '#F2EDE4',
+                        primary: '#E63946',
+                        primaryHover: '#C1121F',
+                        secondary: '#F4A261',
+                        accent: '#2A9D8F',
+                        darkText: '#1E293B',
+                        subText: '#475569',
+                        gold: '#D97706',
+                        goldHover: '#B45309'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #FAF8F5;
+            color: #1E293B;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #D97706 0%, #E63946 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-glow {
+            box-shadow: 0 10px 30px -5px rgba(217, 119, 6, 0.12);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+        }
+        .glass-card:hover {
+            border-color: rgba(217, 119, 6, 0.4);
+            box-shadow: 0 10px 25px -3px rgba(217, 119, 6, 0.1);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E63946;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-primary selection:text-white bg-eggshell">
+
+    <header class="sticky top-0 z-40 glass-card border-b border-stone-200/80 shadow-sm bg-white/95">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="showPage('home')">
+                    <div class="relative w-12 h-12 rounded-2xl border-2 border-gold/40 shadow-sm bg-amber-500/10 flex items-center justify-center text-gold">
+                        <svg class="w-7 h-7 text-gold transform -rotate-6 hover:rotate-0 transition duration-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3c-4.97 0-9 2.24-9 5 0 .28.05.55.13.82.72-.25 1.51-.38 2.37-.38 3.58 0 6.5 2.24 6.5 5 0 .74-.21 1.43-.58 2.05.2.02.39.03.58.03 4.97 0 9-2.24 9-5 0-2.76-4.03-5-9-5zm-8.8 7.37C2.45 10.84 2 11.64 2 12.5c0 2.48 4.48 4.5 10 4.5s10-2.02 10-4.5c0-.86-.45-1.66-1.2-2.13C19.26 11.64 16.03 13 12 13s-7.26-1.36-8.8-2.63zM3 18c0 1.66 4.03 3 9 3s9-1.34 9-3h-18z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-black tracking-wider text-stone-900 flex items-center gap-1">
+                            VAY BABAMDI VAY
+                        </span>
+                        <span class="block text-xs text-gold font-bold -mt-1">سندويجات واي بابامدى واي</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Tabs -->
+                <nav class="hidden md:flex items-center space-x-2 space-x-reverse font-semibold text-sm">
+                    <button onclick="showPage('home')" id="nav-home" title="الرئيسية" class="nav-btn w-11 h-11 flex items-center justify-center rounded-xl transition text-gold bg-amber-500/10 border border-amber-500/30">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </button>
+                    <button onclick="showPage('menu')" id="nav-menu" title="قائمة الأكلات" class="nav-btn w-11 h-11 flex items-center justify-center rounded-xl text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </button>
+                    <button onclick="showPage('branches')" id="nav-branches" title="فروعنا" class="nav-btn w-11 h-11 flex items-center justify-center rounded-xl text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </button>
+                    <!-- Cart Button Icon -->
+                    <button onclick="toggleCartModal()" id="nav-cart" title="سلة الطلبات" class="relative w-11 h-11 flex items-center justify-center rounded-xl text-gold border border-gold/40 bg-gold/10 hover:bg-gold/20 transition shadow-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                        <span id="cartBadgeCount" class="absolute -top-1 -right-1 bg-primary text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center hidden border border-white">0</span>
+                    </button>
+                </nav>
+
+                <!-- Actions: Mobile Menu Toggle & Mobile Cart Icon -->
+                <div class="flex items-center gap-2 md:hidden">
+                    <button onclick="toggleCartModal()" title="سلة الطلبات" class="relative text-gold p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                        <span id="mobileCartBadgeCount" class="absolute top-0 right-0 bg-primary text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="text-stone-700 hover:text-stone-900 p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-2">
+            <button onclick="showPage('home'); toggleMobileMenu();" class="w-full text-right py-2.5 px-4 rounded-xl bg-amber-500/10 text-gold font-bold flex items-center justify-between">
+                <span>الرئيسية</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </button>
+            <button onclick="showPage('menu'); toggleMobileMenu();" class="w-full text-right py-2.5 px-4 rounded-xl text-stone-700 hover:bg-stone-100 font-bold flex items-center justify-between">
+                <span>قائمة الأكلات</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </button>
+            <button onclick="showPage('branches'); toggleMobileMenu();" class="w-full text-right py-2.5 px-4 rounded-xl text-stone-700 hover:bg-stone-100 font-bold flex items-center justify-between">
+                <span>فروعنا</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- PAGE: HOME -->
+        <section id="page-home" class="page-content space-y-16 py-8">
+            
+            <!-- Hero Banner Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8 rounded-3xl overflow-hidden border-2 border-amber-500/30 shadow-xl relative group bg-white">
+                    <img src="WhatsApp Image 2026-09-12 at 5.45.11 PM.jpeg" alt="VAY BABAMDI VAY Banner" class="w-full h-auto max-h-[450px] object-cover sm:object-fill transition duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='memed.png';">
+                </div>
+
+                <div class="relative rounded-3xl overflow-hidden glass-card border border-amber-500/20 p-6 md:p-12 hero-glow bg-white/90">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        
+                        <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                            
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-stone-900">
+                                <span class="gradient-text">VAY BABAMDI VAY</span>
+                            </h1>
+                            
+                            <p class="text-stone-700 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                                مرحباً بكم في مطعم <strong class="text-gold">واي بابامدى واي (VAY BABAMDI VAY)</strong> بإدارة الشيف محمد. نقدم لكم أشهى وأطيب السندويجات المحضرة يومياً بنكهتنا الخاصة, ومستعدون لكافة المناسبات الاعراس وحفلات.
+                            </p>
+
+                            <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
+                                <button onclick="showPage('menu')" class="bg-gradient-to-r from-primary to-primaryHover hover:from-primaryHover hover:to-red-700 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-xl hover:shadow-primary/30 transition transform hover:-translate-y-1 flex items-center gap-3">
+                                    <i class="fa-solid fa-burger"></i> استعرض القائمة والأسعار
+                                </button>
+                                <button onclick="openWhatsAppModal()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-xl transition transform hover:-translate-y-1 flex items-center gap-3 cursor-pointer">
+                                    <i class="fa-brands fa-whatsapp text-xl"></i> اطلب عبر الواتساب
+                                </button>
+                            </div>
+
+                            <!-- Highlights icons -->
+                            <div class="grid grid-cols-2 gap-4 pt-6 border-t border-stone-200 max-w-xs mx-auto lg:mx-0">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-truck-fast text-gold text-2xl mb-1"></i>
+                                    <p class="text-xs text-stone-700 font-bold">توصيل سريع</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fa-solid fa-drumstick-bite text-gold text-2xl mb-1"></i>
+                                    <p class="text-xs text-stone-700 font-bold">لحوم طازجة 100%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Image display -->
+                        <div class="lg:col-span-5 relative flex justify-center">
+                            <div class="relative group w-full max-w-md">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-primary via-gold to-amber-500 rounded-3xl blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
+                                <div class="relative bg-white rounded-3xl p-3 border border-stone-200 overflow-hidden shadow-xl">
+                                    <img src="shif memed.jpeg" alt="VAY BABAMDI VAY Special" class="w-full h-80 sm:h-96 object-cover rounded-2xl transform transition hover:scale-105 duration-500" onerror="this.onerror=null; this.src='memed.png';">
+                                    <div class="absolute bottom-6 right-6 bg-white/95 backdrop-blur border border-gold/40 px-4 py-2 rounded-xl shadow-lg">
+                                        <p class="text-xs text-stone-500 font-bold">الشيف محمد</p>
+                                        <p class="text-sm font-black text-gold">VAY BABAMDI VAY 🍔</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links Banner -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-8 text-center border border-amber-200/60 bg-gradient-to-r from-amber-50/50 via-white to-amber-50/50 shadow-md">
+                    <h3 class="text-2xl font-black mb-3 text-stone-900">تابعونا على مواقع التواصل الاجتماعي</h3>
+                    <p class="text-stone-600 text-sm mb-6">شاهدوا كواليس تحضير السندويجات والعروض اليومية الحصرية</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="https://www.facebook.com/p/%D8%B3%D9%86%D8%AF%D9%88%D9%8A%D8%AC-%D9%88%D8%A7%D9%8A-%D8%A8%D8%A7%D8%A8%D8%A7%D9%85%D8%AF%D9%89-%D9%88%D8%A7%D9%8A-100068259527259/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold flex items-center gap-3 transition shadow-md">
+                            <i class="fa-brands fa-facebook text-2xl"></i> صفحة فيسبوك
+                        </a>
+                        <a href="https://www.instagram.com/memet_shahin35?stkn=MTMzdGp3aTV2eXJ6Mw==" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white px-6 py-3 rounded-xl font-bold flex items-center gap-3 transition shadow-md">
+                            <i class="fa-brands fa-instagram text-2xl"></i> حساب انستغرام
+                        </a>
+                        <a href="https://www.tiktok.com/@memetsahin25?_r=1&_t=ZS-99focaks5ib" target="_blank" class="bg-stone-900 hover:bg-black text-white px-6 py-3 rounded-xl font-bold flex items-center gap-3 transition shadow-md">
+                            <i class="fa-brands fa-tiktok text-2xl"></i> حساب تيك توك
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PAGE: MENU -->
+        <section id="page-menu" class="page-content hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-black text-stone-900">قائمة طعام مطعم <span class="text-primary">VAY BABAMDI VAY</span></h2>
+                <p class="text-stone-600 text-sm sm:text-base">اختر الفرع للاطلاع على أشهى المأكولات والسندويجات المتوفرة وأسعارها</p>
+            </div>
+
+            <!-- Branch Selection Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Kirkuk Branch Card Button -->
+                <button onclick="selectBranchMenu('kirkuk')" id="btn-branch-kirkuk" class="branch-select-card text-right glass-card p-6 rounded-3xl border-2 transition duration-300 relative overflow-hidden group hover:scale-[1.02] border-amber-500/80 bg-white shadow-lg">
+                    <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition"></div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center font-black shadow-md">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8c0-2.2 3.6-4 8-4s8 1.8 8 4M3 12h18M4 16h16c0 2.2-3.6 4-8 4s-8-1.8-8-4z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12v1a2 2 0 002 2h8a2 2 0 002-2v-1"/>
+                            </svg>
+                        </div>
+                        <span id="badge-kirkuk" class="bg-amber-500 text-stone-950 text-xs font-black px-3 py-1.5 rounded-full shadow">الفرع النشط 🌟</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-stone-900 mb-1 group-hover:text-amber-700 transition">قائمة طعام فرع كركوك</h3>
+                    <p class="text-xs text-amber-700 font-bold mb-3"><i class="fa-solid fa-location-dot ml-1"></i> كركوك - شارع الجمهورية</p>
+                    <div class="flex items-center justify-between border-t border-stone-200 pt-3 text-xs text-stone-600">
+                        <span>عدد الأطباق: <strong id="count-kirkuk-items" class="text-stone-900 font-black">8 أطباق</strong></span>
+                        <span class="text-amber-700 font-bold flex items-center gap-1">عرض القائمة <i class="fa-solid fa-arrow-left"></i></span>
+                    </div>
+                </button>
+
+                <!-- Tikrit Branch Card Button -->
+                <button onclick="selectBranchMenu('tikrit')" id="btn-branch-tikrit" class="branch-select-card text-right glass-card p-6 rounded-3xl border-2 transition duration-300 relative overflow-hidden group hover:scale-[1.02] border-stone-200 hover:border-emerald-500/80 bg-white">
+                    <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition"></div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 text-white flex items-center justify-center font-black shadow-md">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4a1 1 0 100-2 1 1 0 000 2zM4 15a8 8 0 0116 0H4zm-1 3h18a1 1 0 010 2H3a1 1 0 010-2z"/>
+                            </svg>
+                        </div>
+                        <span id="badge-tikrit" class="hidden bg-emerald-600 text-white text-xs font-black px-3 py-1.5 rounded-full shadow">الفرع النشط 🌟</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-stone-900 mb-1 group-hover:text-emerald-700 transition">قائمة طعام فرع تكريت</h3>
+                    <p class="text-xs text-emerald-700 font-bold mb-3"><i class="fa-solid fa-location-dot ml-1"></i> تكريت - شارع الأربعين</p>
+                    <div class="flex items-center justify-between border-t border-stone-200 pt-3 text-xs text-stone-600">
+                        <span>عدد الأطباق: <strong id="count-tikrit-items" class="text-stone-900 font-black">11 طبق</strong></span>
+                        <span class="text-emerald-700 font-bold flex items-center gap-1">عرض القائمة <i class="fa-solid fa-arrow-left"></i></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Active Selected Branch Banner -->
+            <div class="glass-card p-4 rounded-2xl border border-stone-200 flex flex-col sm:flex-row justify-between items-center gap-4 bg-white shadow-sm">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-gold flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-utensils text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 id="activeBranchTitle" class="text-lg font-black text-stone-900">قائمة طعام فرع كركوك الرئيسية</h4>
+                        <p id="activeBranchSubtitle" class="text-xs text-stone-600">شارع الجمهورية - هاتف: <span dir="ltr" class="inline-block font-bold">07701274990</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div id="fullMenuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamic Items Populated via JS -->
+            </div>
+
+        </section>
+
+        <!-- PAGE: ADMIN -->
+        <section id="page-admin" class="page-content hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+            
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-6 rounded-2xl border border-stone-200 shadow-sm gap-4">
+                <div>
+                    <h2 class="text-2xl font-black text-stone-900 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                        لوحة إدارة مطعم VAY BABAMDI VAY
+                    </h2>
+                    <p class="text-xs text-stone-600 mt-1">إضافة أكلات جديدة، تعديل الأسعار، المكونات، والصور المرفقة مباشرة مع المزامنة السحابية</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span id="cloudStatusBadge" class="bg-emerald-500/10 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-lg border border-emerald-500/30 flex items-center gap-1.5 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        المزامنة السحابية مباشرة ☁️
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Add New Item Form -->
+                <div class="lg:col-span-5 glass-card p-6 rounded-2xl border border-stone-200 space-y-4 bg-white">
+                    <h3 class="text-lg font-bold text-stone-900 border-b border-stone-200 pb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        إضافة وجبة / سندويج جديد
+                    </h3>
+
+                    <form id="addItemForm" onsubmit="handleAddNewItem(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">الفرع *</label>
+                            <select id="itemBranch" required class="w-full bg-stone-50 border border-stone-300 rounded-xl p-3 text-sm text-stone-900 focus:border-amber-500 focus:outline-none">
+                                <option value="kirkuk">فرع كركوك</option>
+                                <option value="tikrit">فرع تكريت</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">اسم الأكلة / السندويج *</label>
+                            <input type="text" id="itemName" required placeholder="مثال: سندويج شاورما VAY الفاخر" class="w-full bg-stone-50 border border-stone-300 rounded-xl p-3 text-sm text-stone-900 focus:border-amber-500 focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">السعر (د.ع) *</label>
+                            <input type="number" id="itemPrice" required placeholder="مثال: 3000" class="w-full bg-stone-50 border border-stone-300 rounded-xl p-3 text-sm text-stone-900 focus:border-amber-500 focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">شرح قصير للأكلة *</label>
+                            <textarea id="itemDesc" required rows="3" placeholder="اكتب وصفاً شهياً للوجبة والمكونات المميزة..." class="w-full bg-stone-50 border border-stone-300 rounded-xl p-3 text-sm text-stone-900 focus:border-amber-500 focus:outline-none"></textarea>
+                        </div>
+
+                        <!-- Image File Attachment -->
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">إرفاق صورة للأكلة (اختياري)</label>
+                            <input type="file" id="itemImageFile" accept="image/*" onchange="previewSelectedImage(event)" class="block w-full text-xs text-stone-600 file:ml-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-stone-100 file:text-amber-800 hover:file:bg-amber-50 cursor-pointer border border-stone-300 rounded-xl">
+                        </div>
+
+                        <!-- Image Preview Box -->
+                        <div id="imagePreviewContainer" class="hidden relative rounded-xl overflow-hidden h-36 border border-amber-500/40 bg-stone-50">
+                            <img id="imagePreview" src="" alt="معاينة الصورة" class="w-full h-full object-cover">
+                            <span class="absolute top-2 right-2 bg-stone-900/80 text-white text-[10px] px-2 py-0.5 rounded font-bold">معاينة الصورة المرفقة</span>
+                        </div>
+
+                        <button type="submit" id="submitAddBtn" class="w-full bg-gradient-to-r from-gold to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-black py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2 cursor-pointer">
+                            حفظ وإضافة للقائمة السحابية
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Admin Items Table -->
+                <div class="lg:col-span-7 glass-card p-6 rounded-2xl border border-stone-200 space-y-4 bg-white">
+                    <div class="flex justify-between items-center border-b border-stone-200 pb-3">
+                        <h3 class="text-lg font-bold text-stone-900 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                            </svg>
+                            الأكلات الحالية بالقائمة (<span id="adminItemsCount">0</span>)
+                        </h3>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-right text-sm">
+                            <thead class="bg-stone-100 text-stone-700 text-xs font-bold">
+                                <tr>
+                                    <th class="p-3 rounded-r-xl">الصورة</th>
+                                    <th class="p-3">اسم الأكلة</th>
+                                    <th class="p-3">السعر</th>
+                                    <th class="p-3 rounded-l-xl text-center">الإجراء</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminTableBody" class="divide-y divide-stone-200">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PAGE: BRANCHES -->
+        <section id="page-branches" class="page-content hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 px-4 py-1.5 rounded-full text-xs font-bold">
+                    أين تجدنا؟
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-stone-900">فروع مطعم <span class="text-primary">VAY BABAMDI VAY</span></h2>
+                <p class="text-stone-600 text-sm">يسعدنا استقبالكم في فروعنا للتمتع بأشهى السندويجات الساخنة بإدارة الشيف محمد</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Branch 1: Kirkuk -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-amber-500/30 shadow-lg relative flex flex-col justify-between bg-white">
+                    <div class="bg-gradient-to-r from-amber-600 to-primary p-4 text-white flex justify-between items-center">
+                        <h3 class="text-xl font-black flex items-center gap-2">
+                            <i class="fa-solid fa-store"></i> فرع كركوك الرئيسي
+                        </h3>
+                        <span class="bg-white text-amber-800 text-xs font-bold px-3 py-1 rounded-full shadow-sm">الفرع الأوّل</span>
+                    </div>
+                    
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-map-pin text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-stone-900">العنوان</h4>
+                                <p class="text-sm text-stone-600">كركوك / شارع الجمهورية</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-emerald-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-stone-900">الهاتف والواتساب</h4>
+                                <p class="text-sm text-emerald-700 font-bold"><span dir="ltr" class="inline-block tracking-wider">07701274990</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-stone-900">ساعات العمل</h4>
+                                <p class="text-sm text-stone-600">يومياً من الساعة 11:00 صباحاً إلى 2:00 فجراً</p>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Interactive Map Section -->
+                        <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 p-2 space-y-2">
+                            <div class="flex items-center justify-between px-2 pt-1">
+                                <span class="text-xs font-bold text-stone-700 flex items-center gap-1">
+                                    <i class="fa-solid fa-map-location-dot text-primary"></i> موقع الفرع على الخريطة
+                                </span>
+                                <a href="https://maps.google.com/?q=35.47325107067766,44.38542036893569" target="_blank" class="text-[11px] text-amber-700 hover:underline flex items-center gap-1 font-bold">
+                                    فتح في خرائط جوجل <i class="fa-solid fa-up-right-from-square text-[9px]"></i>
+                                </a>
+                            </div>
+                            <div class="w-full h-40 rounded-xl overflow-hidden relative border border-stone-300">
+                                <iframe 
+                                    class="w-full h-full border-0" 
+                                    src="https://maps.google.com/maps?q=35.47325107067766,44.38542036893569&z=17&output=embed" 
+                                    allowfullscreen="" 
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    title="خريطة فرع كركوك الرئيسي - مأكولات واي بابامدى واي">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-stone-50 border-t border-stone-200 flex gap-3">
+                        <a href="tel:07701274990" class="flex-1 bg-primary hover:bg-primaryHover text-white py-2.5 rounded-xl font-bold text-center text-sm transition shadow-sm">
+                            <i class="fa-solid fa-phone ml-1"></i> اتصل بالفرع
+                        </a>
+                        <a href="https://wa.me/9647701274990?text=مرحبا%20فرع%20كركوك،%20اريد%20الطلب%20من%20مطعم%20VAY%20BABAMDI%20VAY" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl font-bold text-center text-sm transition shadow-sm">
+                            <i class="fa-brands fa-whatsapp ml-1"></i> واتساب
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Branch 2: Tikrit Branch -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-stone-200 shadow-lg flex flex-col justify-between bg-white">
+                    <div class="bg-gradient-to-r from-stone-800 to-stone-900 p-4 text-white flex justify-between items-center">
+                        <h3 class="text-xl font-black flex items-center gap-2">
+                            <i class="fa-solid fa-store text-gold"></i> فرع تكريت (الجديد)
+                        </h3>
+                        <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full border border-emerald-500/30">فرع جديد</span>
+                    </div>
+                    
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-map-pin text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-stone-900">العنوان</h4>
+                                <p class="text-sm text-stone-600">تكريت / شارع الأربعين</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-emerald-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-stone-900">الهاتف والواتساب</h4>
+                                <p class="text-sm text-emerald-700 font-bold"><span dir="ltr" class="inline-block tracking-wider">07700934832</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-stone-900">ساعات العمل</h4>
+                                <p class="text-sm text-stone-600">يومياً من الساعة 11:00 صباحاً إلى 2:00 فجراً</p>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Interactive Map Section -->
+                        <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 p-2 space-y-2">
+                            <div class="flex items-center justify-between px-2 pt-1">
+                                <span class="text-xs font-bold text-stone-700 flex items-center gap-1">
+                                    <i class="fa-solid fa-map-location-dot text-primary"></i> موقع الفرع على الخريطة
+                                </span>
+                                <a href="https://maps.google.com/?q=34.590343,43.678211" target="_blank" class="text-[11px] text-amber-700 hover:underline flex items-center gap-1 font-bold">
+                                    فتح في خرائط جوجل <i class="fa-solid fa-up-right-from-square text-[9px]"></i>
+                                </a>
+                            </div>
+                            <div class="w-full h-40 rounded-xl overflow-hidden relative border border-stone-300">
+                                <iframe 
+                                    class="w-full h-full border-0" 
+                                    src="https://maps.google.com/maps?q=34.590343,43.678211&z=15&output=embed" 
+                                    allowfullscreen="" 
+                                    loading="lazy"
+                                    title="خريطة فرع تكريت - شارع الأربعين">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-stone-50 border-t border-stone-200 flex gap-3">
+                        <a href="tel:07700934832" class="flex-1 bg-stone-800 hover:bg-stone-900 text-white py-2.5 rounded-xl font-bold text-center text-sm transition shadow-sm">
+                            <i class="fa-solid fa-phone ml-1"></i> اتصل بالفرع
+                        </a>
+                        <a href="https://wa.me/9647700934832?text=مرحبا%20فرع%20تكريت،%20اريد%20الطلب%20من%20مطعم%20VAY%20BABAMDI%20VAY" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl font-bold text-center text-sm transition shadow-sm">
+                            <i class="fa-brands fa-whatsapp ml-1"></i> واتساب
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- CART MODAL -->
+    <div id="cartModal" class="fixed inset-0 z-50 bg-stone-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-lg rounded-3xl border border-stone-200 overflow-hidden shadow-2xl flex flex-col max-h-[90vh] bg-white">
+            
+            <div class="bg-stone-50 p-5 border-b border-stone-200 flex justify-between items-center">
+                <h3 class="text-xl font-bold text-stone-900 flex items-center gap-2">
+                    <i class="fa-solid fa-cart-shopping text-gold"></i> سلة طلباتك من VAY BABAMDI VAY
+                </h3>
+                <button onclick="toggleCartModal()" class="text-stone-400 hover:text-stone-900 text-xl font-bold cursor-pointer">
+                    ✕
+                </button>
+            </div>
+
+            <div id="cartItemsList" class="p-5 overflow-y-auto space-y-3 flex-grow bg-white">
+                <!-- Cart items populated via JS -->
+            </div>
+
+            <!-- Delivery Details & Total -->
+            <div class="p-5 bg-stone-50 border-t border-stone-200 space-y-4">
+                <div class="flex justify-between items-center text-lg font-black text-stone-900">
+                    <span>المجموع الكلي:</span>
+                    <span id="cartTotalPrice" class="text-gold">0 د.ع</span>
+                </div>
+
+                <div class="space-y-2">
+                    <input type="text" id="customerName" placeholder="الاسم الثلاثي لطلب التوصيل" class="w-full bg-white border border-stone-300 rounded-xl p-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-500">
+                    <select id="customerBranch" class="w-full bg-white border border-stone-300 rounded-xl p-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-500">
+                        <option value="كركوك">توصيل لفرع كركوك ومناطقها</option>
+                        <option value="تكريت">توصيل لفرع تكريت ومناطقها (شارع الأربعين)</option>
+                    </select>
+                </div>
+
+                <button onclick="sendOrderToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2 text-sm cursor-pointer">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> إرسال الطلب عبر الواتساب
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- DELETE CONFIRMATION MODAL -->
+    <div id="deleteItemModal" class="fixed inset-0 z-50 bg-stone-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-sm rounded-3xl border border-stone-200 p-6 text-center space-y-4 bg-white shadow-2xl">
+            <div class="w-16 h-16 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center mx-auto text-3xl font-black border border-rose-500/20">
+                ⚠️
+            </div>
+            <div>
+                <h3 class="text-xl font-black text-stone-900">تأكيد حذف الأكلة</h3>
+                <p class="text-xs text-stone-600 mt-2">هل أنت تأكد من إزالة هذا الطبق من القائمة والمزامنة السحابية؟ لا يمكن التراجع عن هذا الإجراء.</p>
+            </div>
+            <div class="flex gap-3 pt-2">
+                <button onclick="executeDeleteItem()" class="flex-1 bg-rose-600 hover:bg-rose-700 text-white font-black py-3 rounded-xl transition shadow-md cursor-pointer">
+                    نعم، حذف الآن
+                </button>
+                <button onclick="closeDeleteModal()" class="flex-1 bg-stone-200 hover:bg-stone-300 text-stone-800 font-bold py-3 rounded-xl transition cursor-pointer">
+                    إلغاء
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDIT ITEM MODAL -->
+    <div id="editItemModal" class="fixed inset-0 z-50 bg-stone-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-lg rounded-3xl border border-stone-200 overflow-hidden shadow-2xl flex flex-col max-h-[90vh] bg-white">
+            <div class="bg-stone-50 p-5 border-b border-stone-200 flex justify-between items-center">
+                <h3 class="text-xl font-bold text-stone-900 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                    </svg>
+                    تعديل بيانات الأكلة
+                </h3>
+                <button onclick="closeEditModal()" class="text-stone-400 hover:text-stone-900 text-xl font-bold cursor-pointer">
+                    ✕
+                </button>
+            </div>
+            <form id="editItemForm" onsubmit="handleUpdateItem(event)" class="p-5 overflow-y-auto space-y-4">
+                <input type="hidden" id="editItemId">
+                
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">اسم الأكلة / السندويج *</label>
+                    <input type="text" id="editItemName" required class="w-full bg-stone-50 border border-stone-300 rounded-xl p-3 text-sm text-stone-900 focus:border-amber-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">السعر (د.ع) *</label>
+                    <input type="number" id="editItemPrice" required class="w-full bg-stone-50 border border-stone-300 rounded-xl p-3 text-sm text-stone-900 focus:border-amber-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">شرح قصير للأكلة *</label>
+                    <textarea id="editItemDesc" required rows="3" class="w-full bg-stone-50 border border-stone-300 rounded-xl p-3 text-sm text-stone-900 focus:border-amber-500 focus:outline-none"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">تعديل/تغيير الصورة</label>
+                    <input type="file" id="editItemImageFile" accept="image/*" onchange="previewEditSelectedImage(event)" class="block w-full text-xs text-stone-600 file:ml-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-stone-100 file:text-amber-800 hover:file:bg-amber-50 cursor-pointer border border-stone-300 rounded-xl">
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-36 border border-amber-500/40 bg-stone-50">
+                    <img id="editImagePreview" src="" alt="معاينة الصورة" class="w-full h-full object-cover">
+                </div>
+
+                <div class="flex gap-3 pt-2">
+                    <button type="submit" id="submitEditBtn" class="flex-1 bg-gradient-to-r from-gold to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-black py-3 rounded-xl transition shadow-md cursor-pointer">
+                        حفظ التعديلات سحابياً
+                    </button>
+                    <button type="button" onclick="closeEditModal()" class="px-5 bg-stone-200 hover:bg-stone-300 text-stone-800 font-bold py-3 rounded-xl transition cursor-pointer">
+                        إلغاء
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- WHATSAPP BRANCH SELECTION MODAL -->
+    <div id="whatsappModal" class="fixed inset-0 z-50 bg-stone-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-md rounded-3xl border border-stone-200 overflow-hidden shadow-2xl flex flex-col bg-white">
+            <div class="bg-emerald-600 p-5 text-white flex justify-between items-center">
+                <h3 class="text-xl font-bold flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> اختر فرع الواتساب للطلب
+                </h3>
+                <button onclick="closeWhatsAppModal()" class="text-white/80 hover:text-white text-xl font-bold cursor-pointer">
+                    ✕
+                </button>
+            </div>
+            
+            <div class="p-6 space-y-4 bg-white">
+                <p class="text-xs text-stone-600 text-center font-semibold mb-2">اختر الفرع المناسب للتواصل مباشرة عبر الواتساب وإرسال الطلب:</p>
+                
+                <!-- Kirkuk Branch WhatsApp -->
+                <a href="https://wa.me/9647701274990?text=مرحبا%20فرع%20كركوك،%20اريد%20الطلب%20من%20مطعم%20VAY%20BABAMDI%20VAY" target="_blank" onclick="closeWhatsAppModal()" class="flex items-center justify-between p-4 rounded-2xl border border-stone-200 hover:border-emerald-500 bg-stone-50 hover:bg-emerald-50/50 transition group cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl font-bold shadow-sm">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="text-right">
+                            <h4 class="font-bold text-stone-900 text-sm group-hover:text-emerald-700 transition">فرع كركوك الرئيسي</h4>
+                            <p class="text-xs text-emerald-700 font-bold"><span dir="ltr" class="inline-block">07701274990</span></p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-stone-400 group-hover:text-emerald-600 transition"></i>
+                </a>
+
+                <!-- Tikrit Branch WhatsApp -->
+                <a href="https://wa.me/9647700934832?text=مرحبا%20فرع%20تكريت،%20اريد%20الطلب%20من%20مطعم%20VAY%20BABAMDI%20VAY" target="_blank" onclick="closeWhatsAppModal()" class="flex items-center justify-between p-4 rounded-2xl border border-stone-200 hover:border-emerald-500 bg-stone-50 hover:bg-emerald-50/50 transition group cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl font-bold shadow-sm">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="text-right">
+                            <h4 class="font-bold text-stone-900 text-sm group-hover:text-emerald-700 transition">فرع تكريت (شارع الأربعين)</h4>
+                            <p class="text-xs text-emerald-700 font-bold"><span dir="ltr" class="inline-block">07700934832</span></p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-stone-400 group-hover:text-emerald-600 transition"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN AUTHENTICATION MODAL -->
+    <div id="adminAuthModal" class="fixed inset-0 z-50 bg-stone-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-sm rounded-3xl border border-stone-200 p-6 space-y-4 bg-white shadow-2xl">
+            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-gold flex items-center justify-center mx-auto text-2xl font-black border border-amber-500/20">
+                🔒
+            </div>
+            <div class="text-center">
+                <h3 class="text-xl font-black text-stone-900">تسجيل الدخول  </h3>
+                <p class="text-xs text-stone-600 mt-1">أدخل رمز المرور السري للدخول</p>
+            </div>
+            <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+                <div>
+                    <input type="password" id="adminAuthPasswordInput" required placeholder="••••••••" class="w-full bg-stone-50 border border-stone-300 rounded-xl p-3 text-sm text-stone-900 focus:border-amber-500 focus:outline-none text-center font-mono tracking-widest">
+                    <p id="adminAuthError" class="text-xs text-rose-600 font-bold mt-2 text-center hidden">رمز المرور غير صحيح!</p>
+                </div>
+                <div class="flex gap-2">
+                    <button type="submit" class="flex-1 bg-gradient-to-r from-gold to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-black py-3 rounded-xl transition shadow-md cursor-pointer">
+                        دخول
+                    </button>
+                    <button type="button" onclick="closeAdminAuthModal()" class="px-4 bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold py-3 rounded-xl transition cursor-pointer">
+                        إلغاء
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 left-6 z-50 bg-stone-900 text-white px-5 py-3 rounded-2xl font-bold shadow-2xl flex items-center gap-3 transition transform translate-y-20 opacity-0 duration-300 pointer-events-none">
+        <i id="toastIcon" class="fa-solid fa-circle-check text-emerald-400 text-xl"></i>
+        <span id="toastMsg">تمت الإضافة بنجاح!</span>
+    </div>
+
+    <footer class="bg-white border-t border-stone-200 py-10 mt-12 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-right">
+                
+                <div class="space-y-2">
+                    <h4 class="text-2xl font-black text-stone-900">VAY BABAMDI VAY</h4>
+                    <p class="text-xs text-stone-600">مطعم واي بابامدى واي سندويج - إدارة الشيف محمد.</p>
+                </div>
+
+                <!-- Footer Social Media Links -->
+                <div class="flex justify-center gap-4 text-xl">
+                    <a href="https://www.facebook.com/p/%D8%B3%D9%86%D8%AF%D9%88%D9%8A%D8%AC-%D9%88%D8%A7%D9%8A-%D8%A8%D8%A7%D8%A8%D8%A7%D9%85%D8%AF%D9%89-%D9%88%D8%A7%D9%8A-100068259527259/" target="_blank" class="w-10 h-10 rounded-full bg-stone-100 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition shadow-sm" title="صفحة الفيسبوك">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/memet_shahin35?stkn=MTMzdGp3aTV2eXJ6Mw==" target="_blank" class="w-10 h-10 rounded-full bg-stone-100 text-pink-600 flex items-center justify-center hover:bg-pink-600 hover:text-white transition shadow-sm" title="حساب إنستغرام">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@memetsahin25?_r=1&_t=ZS-99focaks5ib" target="_blank" class="w-10 h-10 rounded-full bg-stone-100 text-stone-900 flex items-center justify-center hover:bg-black hover:text-white border border-stone-200 transition shadow-sm" title="حساب تيك توك">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.29 0 .56.04.82.12V9.4a6.27 6.27 0 00-1-.08A6.34 6.34 0 003 15.66a6.34 6.34 0 0010.86 4.43V13a8.31 8.31 0 005.73 2.27V11.8a4.84 4.84 0 01-3.77-1.34 4.83 4.83 0 01-1.23-3.77h5z"/></svg>
+                    </a>
+                </div>
+
+                <div class="text-xs text-stone-500 md:text-left">
+                    <p>© 2026 مطعم VAY BABAMDI VAY. <span onclick="triggerAdminAuth()" class="cursor-pointer hover:text-stone-800 transition select-none">جميع الحقوق محفوظة.</span></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, doc, setDoc, deleteDoc, updateDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        let isAdminAuthenticated = false;
+        const ADMIN_SECRET_KEY = 'fisH27';
+
+        // Direct Custom Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAGamaS0gUFJH3x4GXSRxpnuMnNC3dinaI",
+            authDomain: "vay-babamdi-vay.firebaseapp.com",
+            projectId: "vay-babamdi-vay",
+            storageBucket: "vay-babamdi-vay.firebasestorage.app",
+            messagingSenderId: "574419442258",
+            appId: "1:574419442258:web:3dd887ac7d2521c7149d8b",
+            measurementId: "G-B72DS2SEVS"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Firestore Collection Reference
+        const menuCollectionRef = collection(db, 'menuItems');
+
+        let shoppingCart = [];
+        let uploadedImageBase64 = '';
+        let editUploadedImageBase64 = '';
+        let currentSelectedBranch = 'kirkuk';
+        let pendingDeleteItemId = null;
+
+        // Default Initial Data
+        const DEFAULT_KIRKUK_MENU = [
+            { id: 'k1', branch: 'kirkuk', name: 'لفة روست', price: 2000, desc: 'قطع لحم روست بقري مشوي ومتبل بخلطة الشيف محمد الفاخرة.', image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80' },
+            { id: 'k2', branch: 'kirkuk', name: 'لفة قيمة', price: 2000, desc: 'حشوة قيمة بلدي مطبوخة بالصلصة والمخلل بخبز طازج.', image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80' },
+            { id: 'k3', branch: 'kirkuk', name: 'لفة دجاج قاورمة', price: 2000, desc: 'قطع دجاج قاورمة محمّرة بالبهارات الخاصة والصوص المميز.', image: 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80' },
+            { id: 'k4', branch: 'kirkuk', name: 'لفة صدر دجاج', price: 2000, desc: 'شرائح صدر دجاج مشوية طرية مع المايونيز والخس الطازج.', image: 'https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&w=600&q=80' },
+            { id: 'k5', branch: 'kirkuk', name: 'لفة همبرغر', price: 2500, desc: 'برغر لحم مع شريحة جبن ذائبة وطماطم ومخلل مشوي.', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80' },
+            { id: 'k6', branch: 'kirkuk', name: 'تمن لحم', price: 4000, desc: 'طبق أرز مع قطع لحم بلدي طري وصلصلة المرق الشهية.', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80' },
+            { id: 'k7', branch: 'kirkuk', name: 'تمن دجاج', price: 4000, desc: 'طبق أرز مع دجاج محمر طازج نكهة عراقية أصيلة.', image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80' },
+            { id: 'k8', branch: 'kirkuk', name: 'دولمة نفرين', price: 6000, desc: 'دولمة عراقية مشكلة حامضة ومحشوة باللحم والتوابل الفاخرة.', image: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80' }
+        ];
+
+        const DEFAULT_TIKRIT_MENU = [
+            { id: 't1', branch: 'tikrit', name: 'لفة لحم', price: 3000, desc: 'لحم طازج مشوي ومتبل بخلطة الشيف الخاصة.', image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80' },
+            { id: 't2', branch: 'tikrit', name: 'لفة قيمة', price: 3000, desc: 'قيمة بلدي طازجة مع الصوص الخاص والخضار.', image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80' },
+            { id: 't3', branch: 'tikrit', name: 'لفة باسطرمة', price: 3000, desc: 'شرائح باسطرمة مع البيض والجبن الذائب والتوابل.', image: 'https://images.unsplash.com/photo-1603064752734-4c48eff53d05?auto=format&fit=crop&w=600&q=80' },
+            { id: 't4', branch: 'tikrit', name: 'لفة صدر دجاج', price: 2000, desc: 'صدر دجاج مشوي مقرمش مع المايونيز والسلاو.', image: 'https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&w=600&q=80' },
+            { id: 't5', branch: 'tikrit', name: 'لفة دجاج قاورمه', price: 2000, desc: 'دجاج قاورمة محمر ومتبل ببهارات الشيف محمد.', image: 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80' },
+            { id: 't6', branch: 'tikrit', name: 'همبرغر لحم', price: 3000, desc: 'همبرغر لحم عراقي بلدي مشوي مع الجبن والخس والطماطم.', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80' },
+            { id: 't7', branch: 'tikrit', name: 'همبرغر دجاج', price: 2000, desc: 'برغر دجاج مقرمش طازج مع صوص الثوم والجبن.', image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80' },
+            { id: 't8', branch: 'tikrit', name: 'لحم على تمن', price: 5000, desc: 'طبق أرز مع لحم مشوي طري وصلصة فاخرة.', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80' },
+            { id: 't9', branch: 'tikrit', name: 'دجاج على تمن', price: 5000, desc: 'طبق أرز مع قطع دجاج محمرة بنكهة ممتازة.', image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80' },
+            { id: 't10', branch: 'tikrit', name: 'دولمة نفرين', price: 7000, desc: 'دولمة عراقية حامضة ومحشية طازجة تكفي شخصين.', image: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80' },
+            { id: 't11', branch: 'tikrit', name: 'دولمة اربعة نفرات', price: 10000, desc: 'صينية دولمة عائلية فاخرة محشوة ومبهرة تكفي 4 أشخاص.', image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80' }
+        ];
+
+        let KIRKUK_MENU = [...DEFAULT_KIRKUK_MENU];
+        let TIKRIT_MENU = [...DEFAULT_TIKRIT_MENU];
+
+        // Compress image before saving to prevent Firestore 1MB document limit issues
+        function compressImage(file, callback) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    let width = img.width;
+                    let height = img.height;
+                    const maxDim = 500; // max dimension
+
+                    if (width > height) {
+                        if (width > maxDim) {
+                            height = Math.round((height * maxDim) / width);
+                            width = maxDim;
+                        }
+                    } else {
+                        if (height > maxDim) {
+                            width = Math.round((width * maxDim) / height);
+                            height = maxDim;
+                        }
+                    }
+
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+
+                    // Compress JPEG quality to 0.75
+                    const compressedBase64 = canvas.toDataURL('image/jpeg', 0.75);
+                    callback(compressedBase64);
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        async function initCloudSync() {
+            try {
+                await signInAnonymously(auth);
+            } catch (err) {
+                console.warn("Auth initialization warning:", err);
+            }
+
+            // Load LocalStorage cache first for instantaneous UI render
+            const cachedItems = localStorage.getItem('vay_menu_items');
+            if (cachedItems) {
+                try {
+                    const parsed = JSON.parse(cachedItems);
+                    if (parsed && parsed.length > 0) {
+                        KIRKUK_MENU = parsed.filter(i => i.branch === 'kirkuk');
+                        TIKRIT_MENU = parsed.filter(i => i.branch === 'tikrit');
+                        updateBranchItemCounts();
+                        renderBranchMenu();
+                        renderAdminTable();
+                    }
+                } catch(e) {}
+            }
+
+            // Real-time Cloud Listener
+            onSnapshot(menuCollectionRef, async (snapshot) => {
+                if (snapshot.empty) {
+                    // Seed initial default items if empty
+                    try {
+                        for (const item of [...DEFAULT_KIRKUK_MENU, ...DEFAULT_TIKRIT_MENU]) {
+                            await setDoc(doc(db, 'menuItems', item.id), item);
+                        }
+                    } catch(e) {
+                        console.warn("Seeding default menu items warning:", e);
+                    }
+                    return;
+                }
+
+                const allItems = [];
+                snapshot.forEach(docSnap => {
+                    allItems.push({ id: docSnap.id, ...docSnap.data() });
+                });
+
+                // Update Local Storage
+                localStorage.setItem('vay_menu_items', JSON.stringify(allItems));
+
+                KIRKUK_MENU = allItems.filter(i => i.branch === 'kirkuk');
+                TIKRIT_MENU = allItems.filter(i => i.branch === 'tikrit');
+
+                updateBranchItemCounts();
+                renderBranchMenu();
+                renderAdminTable();
+            }, (error) => {
+                console.error("Cloud sync snapshot error:", error);
+            });
+        }
+
+        window.openWhatsAppModal = function() {
+            const modal = document.getElementById('whatsappModal');
+            if (modal) modal.classList.remove('hidden');
+        };
+
+        window.closeWhatsAppModal = function() {
+            const modal = document.getElementById('whatsappModal');
+            if (modal) modal.classList.add('hidden');
+        };
+
+        window.triggerAdminAuth = function() {
+            if (isAdminAuthenticated) {
+                window.showPage('admin');
+            } else {
+                const modal = document.getElementById('adminAuthModal');
+                const err = document.getElementById('adminAuthError');
+                const input = document.getElementById('adminAuthPasswordInput');
+                if (err) err.classList.add('hidden');
+                if (input) input.value = '';
+                if (modal) modal.classList.remove('hidden');
+            }
+        };
+
+        window.closeAdminAuthModal = function() {
+            const modal = document.getElementById('adminAuthModal');
+            if (modal) modal.classList.add('hidden');
+        };
+
+        window.handleAdminLogin = function(event) {
+            event.preventDefault();
+            const input = document.getElementById('adminAuthPasswordInput');
+            const err = document.getElementById('adminAuthError');
+
+            if (input && input.value === ADMIN_SECRET_KEY) {
+                isAdminAuthenticated = true;
+                window.closeAdminAuthModal();
+                window.showPage('admin');
+                window.showToast("تم الدخول إلى لوحة التحكم بنجاح! 🔓");
+            } else {
+                if (err) err.classList.remove('hidden');
+            }
+        };
+
+        window.showPage = function(pageId) {
+            if (pageId === 'admin' && !isAdminAuthenticated) {
+                window.triggerAdminAuth();
+                return;
+            }
+
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(p => p.classList.add('hidden'));
+
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
+
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('text-gold', 'bg-amber-500/10', 'border', 'border-amber-500/30');
+                btn.classList.add('text-stone-600');
+            });
+
+            const activeBtn = document.getElementById('nav-' + pageId);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-stone-600');
+                activeBtn.classList.add('text-gold', 'bg-amber-500/10', 'border', 'border-amber-500/30');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        window.toggleMobileMenu = function() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        };
+
+        function updateBranchItemCounts() {
+            const kirkukCountEl = document.getElementById('count-kirkuk-items');
+            const tikritCountEl = document.getElementById('count-tikrit-items');
+            
+            if (kirkukCountEl) kirkukCountEl.innerText = `${KIRKUK_MENU.length} أطباق`;
+            if (tikritCountEl) tikritCountEl.innerText = `${TIKRIT_MENU.length} أطباق`;
+        }
+
+        window.handleAddNewItem = async function(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submitAddBtn');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = "جاري الحفظ والرفع...";
+            }
+
+            try {
+                const branch = document.getElementById('itemBranch').value;
+                const name = document.getElementById('itemName').value;
+                const price = parseInt(document.getElementById('itemPrice').value) || 0;
+                const desc = document.getElementById('itemDesc').value;
+                const image = uploadedImageBase64 || 'memed.png';
+
+                const itemId = 'item_' + Date.now();
+                const newItem = {
+                    id: itemId,
+                    branch,
+                    name,
+                    price,
+                    desc,
+                    image
+                };
+
+                // 1. Cloud Firestore Save
+                await setDoc(doc(db, 'menuItems', itemId), newItem);
+
+                // 2. Local Fallback Backup
+                if (branch === 'kirkuk') {
+                    KIRKUK_MENU.push(newItem);
+                } else {
+                    TIKRIT_MENU.push(newItem);
+                }
+                localStorage.setItem('vay_menu_items', JSON.stringify([...KIRKUK_MENU, ...TIKRIT_MENU]));
+
+                event.target.reset();
+                uploadedImageBase64 = '';
+                const previewContainer = document.getElementById('imagePreviewContainer');
+                if (previewContainer) previewContainer.classList.add('hidden');
+
+                renderBranchMenu();
+                renderAdminTable();
+                updateBranchItemCounts();
+
+                const branchName = branch === 'kirkuk' ? 'فرع كركوك' : 'فرع تكريت';
+                window.showToast(`تمت إضافة "${name}" وسُجلت سحابياً بنجاح! ✨`);
+            } catch (err) {
+                console.error("Error adding new item:", err);
+                window.showToast("حدث خطأ أثناء الحفظ! يرجى إدخال صورة أصغر حسماً.", "error");
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "حفظ وإضافة للقائمة السحابية";
+                }
+            }
+        };
+
+        function renderAdminTable() {
+            const tbody = document.getElementById('adminTableBody');
+            if (!tbody) return;
+
+            const kirkukItems = KIRKUK_MENU.map(i => ({ ...i, branchLabel: 'فرع كركوك' }));
+            const tikritItems = TIKRIT_MENU.map(i => ({ ...i, branchLabel: 'فرع تكريت' }));
+            const allItems = [...kirkukItems, ...tikritItems];
+
+            const countEl = document.getElementById('adminItemsCount');
+            if (countEl) countEl.innerText = allItems.length;
+
+            tbody.innerHTML = allItems.map((item) => `
+                <tr class="hover:bg-stone-50 transition">
+                    <td class="p-3">
+                        <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-cover rounded-lg border border-stone-200" onerror="this.onerror=null; this.src='memed.png';">
+                    </td>
+                    <td class="p-3">
+                        <div class="font-bold text-stone-900">${item.name}</div>
+                        <span class="text-[10px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-full inline-block mt-0.5">${item.branchLabel}</span>
+                    </td>
+                    <td class="p-3 text-gold font-bold">${item.price.toLocaleString()} د.ع</td>
+                    <td class="p-3 text-center">
+                        <div class="flex items-center justify-center gap-2">
+                            <button type="button" onclick="openEditModal('${item.id}')" class="bg-amber-500/10 hover:bg-amber-500 text-amber-800 hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition inline-flex items-center gap-1 border border-amber-500/30 cursor-pointer">
+                                ✏️ تعديل
+                            </button>
+                            <button type="button" onclick="confirmDeleteItem('${item.id}')" class="bg-rose-500/10 hover:bg-rose-500 text-rose-700 hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition inline-flex items-center gap-1 border border-rose-500/30 cursor-pointer">
+                                🗑️ حذف
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        window.confirmDeleteItem = function(itemId) {
+            pendingDeleteItemId = itemId;
+            const modal = document.getElementById('deleteItemModal');
+            if (modal) modal.classList.remove('hidden');
+        };
+
+        window.closeDeleteModal = function() {
+            pendingDeleteItemId = null;
+            const modal = document.getElementById('deleteItemModal');
+            if (modal) modal.classList.add('hidden');
+        };
+
+        window.executeDeleteItem = async function() {
+            if (!pendingDeleteItemId) return;
+            const itemToDeleteId = pendingDeleteItemId;
+            let deletedItemName = '';
+            
+            const allItems = [...KIRKUK_MENU, ...TIKRIT_MENU];
+            const target = allItems.find(i => i.id === itemToDeleteId);
+            if (target) deletedItemName = target.name;
+
+            try {
+                // Delete from Firestore
+                await deleteDoc(doc(db, 'menuItems', itemToDeleteId));
+
+                // Update Local Cache
+                KIRKUK_MENU = KIRKUK_MENU.filter(i => i.id !== itemToDeleteId);
+                TIKRIT_MENU = TIKRIT_MENU.filter(i => i.id !== itemToDeleteId);
+                localStorage.setItem('vay_menu_items', JSON.stringify([...KIRKUK_MENU, ...TIKRIT_MENU]));
+
+                renderBranchMenu();
+                renderAdminTable();
+                updateBranchItemCounts();
+
+                window.closeDeleteModal();
+                window.showToast(`تم حذف "${deletedItemName}" من القائمة سحابياً`);
+            } catch (err) {
+                console.error("Error deleting item:", err);
+                window.showToast("حدث خطأ أثناء إزالة الطبق سحابياً!", "error");
+            }
+        };
+
+        window.openEditModal = function(itemId) {
+            const item = [...KIRKUK_MENU, ...TIKRIT_MENU].find(i => i.id === itemId);
+            if (!item) return;
+
+            document.getElementById('editItemId').value = item.id;
+            document.getElementById('editItemName').value = item.name;
+            document.getElementById('editItemPrice').value = item.price;
+            document.getElementById('editItemDesc').value = item.desc;
+            
+            editUploadedImageBase64 = item.image;
+            const previewImg = document.getElementById('editImagePreview');
+            if (previewImg) previewImg.src = item.image;
+
+            const modal = document.getElementById('editItemModal');
+            if (modal) modal.classList.remove('hidden');
+        };
+
+        window.closeEditModal = function() {
+            const modal = document.getElementById('editItemModal');
+            if (modal) modal.classList.add('hidden');
+        };
+
+        window.previewEditSelectedImage = function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                compressImage(file, function(compressedBase64) {
+                    editUploadedImageBase64 = compressedBase64;
+                    const previewImg = document.getElementById('editImagePreview');
+                    if (previewImg) previewImg.src = editUploadedImageBase64;
+                });
+            }
+        };
+
+        window.handleUpdateItem = async function(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submitEditBtn');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = "جاري الحفظ...";
+            }
+
+            try {
+                const id = document.getElementById('editItemId').value;
+                const name = document.getElementById('editItemName').value;
+                const price = parseInt(document.getElementById('editItemPrice').value) || 0;
+                const desc = document.getElementById('editItemDesc').value;
+
+                const updatedData = {
+                    name,
+                    price,
+                    desc
+                };
+                if (editUploadedImageBase64) {
+                    updatedData.image = editUploadedImageBase64;
+                }
+
+                // Firestore Update
+                await updateDoc(doc(db, 'menuItems', id), updatedData);
+
+                // Local Memory Update
+                const updateInArray = (arr) => {
+                    const idx = arr.findIndex(i => i.id === id);
+                    if (idx !== -1) {
+                        arr[idx] = { ...arr[idx], ...updatedData };
+                    }
+                };
+                updateInArray(KIRKUK_MENU);
+                updateInArray(TIKRIT_MENU);
+                localStorage.setItem('vay_menu_items', JSON.stringify([...KIRKUK_MENU, ...TIKRIT_MENU]));
+
+                renderBranchMenu();
+                renderAdminTable();
+
+                window.closeEditModal();
+                window.showToast(`تم تعديل "${name}" سحابياً بنجاح! ✨`);
+            } catch (err) {
+                console.error("Error updating item:", err);
+                window.showToast("حدث خطأ أثناء تعديل الطبق!", "error");
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "حفظ التعديلات سحابياً";
+                }
+            }
+        };
+
+        window.selectBranchMenu = function(branch) {
+            currentSelectedBranch = branch;
+            const btnKirkuk = document.getElementById('btn-branch-kirkuk');
+            const btnTikrit = document.getElementById('btn-branch-tikrit');
+            const badgeKirkuk = document.getElementById('badge-kirkuk');
+            const badgeTikrit = document.getElementById('badge-tikrit');
+            const activeTitle = document.getElementById('activeBranchTitle');
+            const activeSub = document.getElementById('activeBranchSubtitle');
+
+            if(branch === 'kirkuk') {
+                btnKirkuk.className = "branch-select-card text-right glass-card p-6 rounded-3xl border-2 transition duration-300 relative overflow-hidden group hover:scale-[1.02] border-amber-500/80 bg-white shadow-lg";
+                btnTikrit.className = "branch-select-card text-right glass-card p-6 rounded-3xl border-2 transition duration-300 relative overflow-hidden group hover:scale-[1.02] border-stone-200 hover:border-emerald-500/80 bg-white";
+                badgeKirkuk.classList.remove('hidden');
+                badgeTikrit.classList.add('hidden');
+                activeTitle.innerText = "قائمة طعام فرع كركوك الرئيسية";
+                activeSub.innerHTML = 'شارع الجمهورية - هاتف: <span dir="ltr" class="inline-block font-bold">07701274990</span>';
+            } else {
+                btnTikrit.className = "branch-select-card text-right glass-card p-6 rounded-3xl border-2 transition duration-300 relative overflow-hidden group hover:scale-[1.02] border-emerald-500/80 bg-white shadow-lg";
+                btnKirkuk.className = "branch-select-card text-right glass-card p-6 rounded-3xl border-2 transition duration-300 relative overflow-hidden group hover:scale-[1.02] border-stone-200 hover:border-amber-500/80 bg-white";
+                badgeTikrit.classList.remove('hidden');
+                badgeKirkuk.classList.add('hidden');
+                activeTitle.innerText = "قائمة طعام فرع تكريت";
+                activeSub.innerHTML = 'شارع الأربعين - هاتف: <span dir="ltr" class="inline-block font-bold">07700934832</span>';
+            }
+
+            renderBranchMenu();
+        };
+
+        function renderBranchMenu() {
+            const container = document.getElementById('fullMenuGrid');
+            if (!container) return;
+
+            const itemsList = currentSelectedBranch === 'kirkuk' ? KIRKUK_MENU : TIKRIT_MENU;
+
+            if(itemsList.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12 glass-card rounded-2xl bg-white">
+                        <i class="fa-solid fa-burger text-4xl text-stone-400 mb-2"></i>
+                        <p class="text-stone-500 font-bold">لا توجد أكلات حالياً في قائمة هذا الفرع</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = itemsList.map(item => `
+                <div class="glass-card rounded-3xl overflow-hidden border border-stone-200 bg-white flex flex-col justify-between group hover:border-amber-500/60 transition shadow-sm hover:shadow-md">
+                    <div class="relative h-48 overflow-hidden bg-stone-100">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='memed.png';">
+                    </div>
+                    <div class="p-5 space-y-3 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-stone-900 group-hover:text-gold transition">${item.name}</h3>
+                            <p class="text-xs text-stone-600 mt-2 leading-relaxed">${item.desc}</p>
+                        </div>
+
+                        <div class="border-t border-stone-200 pt-3 flex items-center justify-between">
+                            <span class="text-lg font-black text-gold">${item.price.toLocaleString()} <span class="text-xs text-stone-500 font-normal">د.ع</span></span>
+                            <div class="flex gap-2">
+                                <button onclick="addToCartByItem('${item.id}', '${item.name.replace(/'/g, "\\'")}', ${item.price}, '${item.image}')" class="bg-gradient-to-r from-primary to-primaryHover hover:opacity-95 text-white px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow-sm cursor-pointer">
+                                    <i class="fa-solid fa-plus"></i> طلب الآن
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.previewSelectedImage = function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                compressImage(file, function(compressedBase64) {
+                    uploadedImageBase64 = compressedBase64;
+                    const previewImg = document.getElementById('imagePreview');
+                    const previewContainer = document.getElementById('imagePreviewContainer');
+                    if (previewImg && previewContainer) {
+                        previewImg.src = uploadedImageBase64;
+                        previewContainer.classList.remove('hidden');
+                    }
+                });
+            }
+        };
+
+        window.addToCartByItem = function(id, name, price, image) {
+            const existing = shoppingCart.find(i => i.id === id);
+            if(existing) {
+                existing.qty++;
+            } else {
+                shoppingCart.push({ id, name, price, image, qty: 1 });
+            }
+            updateCartUI();
+            window.showToast(`تمت إضافة "${name}" إلى السلة`);
+        };
+
+        window.updateCartQty = function(itemId, delta) {
+            const item = shoppingCart.find(i => i.id === itemId);
+            if(!item) return;
+
+            item.qty += delta;
+            if(item.qty <= 0) {
+                shoppingCart = shoppingCart.filter(i => i.id !== itemId);
+            }
+            updateCartUI();
+        };
+
+        function updateCartUI() {
+            const listContainer = document.getElementById('cartItemsList');
+            const totalPriceEl = document.getElementById('cartTotalPrice');
+            const badgeEl = document.getElementById('cartBadgeCount');
+            const mobileBadgeEl = document.getElementById('mobileCartBadgeCount');
+
+            const totalCount = shoppingCart.reduce((sum, item) => sum + item.qty, 0);
+
+            if (badgeEl) {
+                if (totalCount > 0) {
+                    badgeEl.innerText = totalCount;
+                    badgeEl.classList.remove('hidden');
+                } else {
+                    badgeEl.classList.add('hidden');
+                }
+            }
+
+            if (mobileBadgeEl) {
+                if (totalCount > 0) {
+                    mobileBadgeEl.innerText = totalCount;
+                    mobileBadgeEl.classList.remove('hidden');
+                } else {
+                    mobileBadgeEl.classList.add('hidden');
+                }
+            }
+
+            if (!listContainer || !totalPriceEl) return;
+
+            if(shoppingCart.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="text-center py-8 text-stone-400 space-y-2">
+                        <i class="fa-solid fa-basket-shopping text-3xl"></i>
+                        <p class="text-sm">السلة فارغة حالياً</p>
+                    </div>
+                `;
+                totalPriceEl.innerText = '0 د.ع';
+                return;
+            }
+
+            let total = 0;
+            listContainer.innerHTML = shoppingCart.map(item => {
+                const subtotal = item.price * item.qty;
+                total += subtotal;
+                return `
+                    <div class="bg-stone-50 p-3 rounded-xl flex items-center justify-between gap-3 border border-stone-200">
+                        <div class="flex items-center gap-3">
+                            <img src="${item.image}" class="w-10 h-10 object-cover rounded-lg" onerror="this.onerror=null; this.src='memed.png';">
+                            <div>
+                                <h4 class="text-xs font-bold text-stone-900">${item.name}</h4>
+                                <p class="text-[10px] text-gold font-bold">${item.price.toLocaleString()} د.ع</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="updateCartQty('${item.id}', -1)" class="w-6 h-6 bg-stone-200 text-stone-800 rounded text-xs font-bold hover:bg-rose-600 hover:text-white transition cursor-pointer">-</button>
+                            <span class="text-xs font-bold px-1 text-stone-900">${item.qty}</span>
+                            <button onclick="updateCartQty('${item.id}', 1)" class="w-6 h-6 bg-stone-200 text-stone-800 rounded text-xs font-bold hover:bg-emerald-600 hover:text-white transition cursor-pointer">+</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            totalPriceEl.innerText = `${total.toLocaleString()} د.ع`;
+        }
+
+        window.toggleCartModal = function() {
+            const modal = document.getElementById('cartModal');
+            if (!modal) return;
+
+            if (modal.classList.contains('hidden')) {
+                if (shoppingCart.length === 0) {
+                    window.showToast("السلة فارغة حالياً");
+                    return;
+                }
+            }
+            modal.classList.toggle('hidden');
+        };
+
+        window.sendOrderToWhatsApp = function() {
+            if(shoppingCart.length === 0) {
+                window.showToast("السلة فارغة! يرجى إضافة أكلات أولاً.");
+                return;
+            }
+
+            const name = document.getElementById('customerName')?.value || 'زبون محترم';
+            const branch = document.getElementById('customerBranch')?.value || 'كركوك';
+
+            let msg = `*طلب جديد من مطعم VAY BABAMDI VAY* 🍔%0A`;
+            msg += `*إدارة الشيف محمد*%0A`;
+            msg += `*اسم الزبون:* ${encodeURIComponent(name)}%0A`;
+            msg += `*الفرع:* ${encodeURIComponent(branch)}%0A`;
+            msg += `----------------------------------%0A`;
+
+            let total = 0;
+            shoppingCart.forEach((item, idx) => {
+                const sub = item.price * item.qty;
+                total += sub;
+                msg += `${idx + 1}. ${encodeURIComponent(item.name)} (عدد: ${item.qty}) - ${sub.toLocaleString()} د.ع%0A`;
+            });
+
+            msg += `----------------------------------%0A`;
+            msg += `*المجموع الكلي:* ${total.toLocaleString()} د.ع%0A`;
+            msg += `يرجى تأكيد الطلب والتوصيل 🙏`;
+
+            const phone = branch === 'تكريت' ? '9647700934832' : '9647701274990';
+            const whatsappUrl = `https://wa.me/${phone}?text=${msg}`;
+            window.open(whatsappUrl, '_blank');
+
+            // Clear cart, reset UI & close modal after sending
+            shoppingCart = [];
+            updateCartUI();
+            const modal = document.getElementById('cartModal');
+            if (modal && !modal.classList.contains('hidden')) {
+                modal.classList.add('hidden');
+            }
+            const nameInput = document.getElementById('customerName');
+            if (nameInput) nameInput.value = '';
+            window.showToast("تم تحويل طلبك إلى الواتساب وإفراغ السلة بنجاح! 🛍️");
+        };
+
+        window.showToast = function(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            const toastIcon = document.getElementById('toastIcon');
+
+            if (toast && toastMsg) {
+                toastMsg.innerText = message;
+                if (toastIcon) {
+                    if (type === 'error') {
+                        toastIcon.className = "fa-solid fa-circle-exclamation text-rose-500 text-xl";
+                    } else {
+                        toastIcon.className = "fa-solid fa-circle-check text-emerald-400 text-xl";
+                    }
+                }
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 3200);
+            }
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initCloudSync();
+        });
+    </script>
+</body>
+</html>
